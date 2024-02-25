@@ -27,7 +27,7 @@ def loadDocuments():
 
 def splitText(documents):
     textSplitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000, chunk_overlap=100, length_function=len, add_start_index=True
+        chunk_size=1024, chunk_overlap=512, length_function=len, add_start_index=True
     )
     chunks = textSplitter.split_documents(documents)
     print(f"Quebrando {len(documents)} documentos em {len(chunks)} chunks")
